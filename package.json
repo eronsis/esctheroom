@@ -1,0 +1,25 @@
+{
+  "name": "esctheroom",
+  "version": "1.0.0",
+  "description": "Escape the Room Countdown clock with hint section",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "escape",
+    "the",
+    "room",
+    "clock",
+    "timer",
+    "countdown"
+  ],
+  "author": "mitchgu and eronsis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "onoff": "^3.1.0",
+    "socket.io": "^2.1.0"
+  }
+}

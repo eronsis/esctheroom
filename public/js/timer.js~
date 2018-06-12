@@ -1,0 +1,24 @@
+var socket;
+
+$(function() {
+
+    $("#reset").click(function() {
+	console.log("click");
+	socket = io.connect('http://localhost:3000');
+	var data = {
+	    isCountdown : true,
+	    hr  : $("#hours").val(),
+	    min : $("#minutes").val(),
+	    sec : $("#seconds").val()
+	};
+	socket.emit('start timer', data);
+    });
+});
+
+socket.on('countdown time', setTime(data));
+
+function setTime(data) {
+    $("#hours").val(data.hr);
+    $("#minutes").val(data.min);
+    $("#seconds").val(data.seconds);
+};
